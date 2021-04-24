@@ -1,12 +1,21 @@
 import { Component } from 'react'
-import { DisplayMessage } from './components/DisplayMessage'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+import { ChooseUsername } from './pages/ChooseUsername'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <DisplayMessage message="Hello World" isRight />
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/">
+            <ChooseUsername />
+          </Route>
+        </Switch>
+      </Router>
     )
   }
 }

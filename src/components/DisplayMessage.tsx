@@ -22,6 +22,7 @@ export class DisplayMessage extends Component<DisplayMessageProps, DisplayMessag
   render() {
     const isRightClassName = this.state.isRight ? ' isRight' : ''
     const className = `message${isRightClassName}`
+
     return (
       <article className={className}><p className="content">{this.props.message}</p></article>
     )
